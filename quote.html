@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description">
+    <title>Absolute Apparel - Quote</title>
+    <link rel="stylesheet" href="css/quote.css">
+  </head>
+
+  <body>
+    <div class="navbar">
+        <a href="index.html">
+            <div class="navbar_logo">
+                <img class="navbar_icon" src="images/icons/logo.png" alt="logo">
+            </div>
+        </a>
+        <div id="navbar_links">
+            <div class="navbar_link">
+                <h2>①</h2>
+                <h3>Details</h3>
+            </div>
+            <div class="navbar_link">
+                <h2>②</h2>
+                <h3>Design</h3>
+            </div>
+            <div class="navbar_link">
+                <h2>③</h2>
+                <h3>Get a Quote</h3>
+            </div>
+        </div>
+        <a href="index.html">
+            <div class="navbar_exit">
+                <img class="navbar_icon" src="images/icons/exit.png" alt="exit">
+            </div>
+        </a>
+    </div>
+
+    <div id="quotewindow">
+        <div id="quote_details" class="question_box visible">
+            <h1>Design Specifications</h1>
+
+            <div class="options_box">
+                <h2>Select Apparel Type:</h2>
+                
+                <div class="options_options" id="apparel_options">
+                    <div class="options_card apparel-option" onclick="item_select(0)">
+                        <img class="options_icon" src="images/tshirt.png" alt="Short Sleeve">
+                        <h3>Short Sleeve</h3>
+                    </div>
+                    <div class="options_card apparel-option" onclick="item_select(1)">
+                        <img class="options_icon" src="images/longsleeve.png" alt="Long Sleeve">
+                        <h3>Long Sleeve</h3>
+                    </div>
+                    <div class="options_card apparel-option" onclick="item_select(2)">
+                        <img class="options_icon" src="images/hoodie.png" alt="Hoodie">
+                        <h3>Hoodie</h3>
+                    </div>
+                    <div class="options_card apparel-option" onclick="item_select(3)">
+                        <img class="options_icon" src="images/tanktop.png" alt="Tank Top">
+                        <h3>Tank Top</h3>
+                    </div>
+                    <div class="options_card apparel-option" onclick="item_select(4)">
+                        <img class="options_icon" src="images/jeans.png" alt="Jeans">
+                        <h3>Jeans</h3>
+                    </div>
+                    <div class="options_card apparel-option" onclick="item_select(5)">
+                        <img class="options_icon" src="images/sweatpants.png" alt="Sweatpands">
+                        <h3>Sweatpants</h3>
+                    </div>
+                    <div class="options_card apparel-option" onclick="item_select(6)">
+                        <img class="options_icon" src="images/shorts.png" alt="Shorts">
+                        <h3>Shorts</h3>
+                    </div>
+                    <div class="options_card apparel-option" onclick="item_select(7)">
+                        <p>What might you imagine?</p>
+                        <h3>Other</h3>
+                    </div>
+                </div>
+
+                <input type="text" id="apparel_other" class="input_box hidden" placeholder="Enter apparel type">
+            </div>
+
+            <div class="options_options wid75" id="colors_selector">
+                <div class="dropdown_option">
+                    <h2>Quantity</h2>
+                    <p>(Minimum 6)</p>
+                    <div class="wid85 aligncenter">
+                        <input type="number" id="quantity" name="quantity" min="6" max="1000" value="6" class="input_box">
+                    </div>
+                </div>
+                
+                <div class="dropdown_option">
+                    <h2 class="no_p_header">Fabric Type</h2>
+                    <div class="wid85 aligncenter">
+                        <select id="fabric" name="fabric" class="select_box" onchange="fabric_select()">
+                            <option value="cotton">100% Cotton</option>
+                            <option value="polyester">100% Polyester</option>
+                            <option value="cottonpoly">50% + Cotton</option>
+                            <option value="polyestercotton">50% + Polyester</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <div id="other_fabric_input" class="hidden">
+                            <p>What fabric type are you looking for?</p>
+
+                            <input type="text" id="fabric_other" name="fabric_other" class="input_box">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dropdown_option">
+                    <h2>Number of Print Locations</h2>
+                    <p>Max 4 - Front, Back, Sides</p>
+                    <div class="wid85">
+                        <select id="num_printlocs" class="select_box">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="wid75 spacing_bottom"><!-- Spacing --></div>
+                
+                <div class="dropdown_option">
+                    <h2 class="no_p_header">Number of Colors</h2>
+                    <div class="wid85">
+                        <select id="num_colors" class="select_box" onchange="color_select()">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="dropdown_option">
+                    <h2>Color Usage</h2>
+                    <p>Please explain how you would like the colors laid out on the selected item.</p>
+                    <div class="wid85">
+                        <input type="text" class="input_box" id="color1" name="color1" placeholder="Enter color">
+                    </div>
+                </div>
+
+                <div class="dropdown_option">
+                    <h2>Color 1</h2>
+                    <p>Enter the color name or hexadecimal #.</p>
+                    <div class="wid85">
+                        <input type="text" class="input_box" id="color1" name="color1" placeholder="Enter color">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quote_design" class="question_box hidden">
+            <h1>Upload Design</h1>
+            <h3>Add your files here, preferrably Adobe Illustrator (.ai) files. PNG and PDF files are also accepted, but may incur a digitization fee.</h3>
+            <h4>If you are still working on the design, then you can leave this blank - we will reach out to you for more information.</h4>
+
+            <div class="file_select" id="wrapper">
+                <h1>Drop your Files</h1>
+                <p>or</p>
+                <form action="" id="form">
+                    <label for="file-upload">Choose Manually</label>
+                    <input type="file" name="files[]" id="file-upload" multiple>
+                </form>
+                <div id="file-count"></div>
+                <div id="file-preview">
+        
+                </div>
+            </div>
+        </div>
+
+        <div id="quote_getquote" class="question_box hidden">
+            <h1>Get Your Quote</h1>
+            <h3>Fill out the form below to get your quote. You should receive a quote within [n] business days.</h3>
+            <h4>The standard shipping time for all items is <b>10 days</b>.</h2>
+            <form id="quote_form">
+                <div class="input_container">
+                    <input type="text" id="first_name" name="first_name" class="final_input_box" placeholder="First Name">
+                    <input type="text" id="last_name" name="last_name" class="final_input_box" placeholder="Last Name">
+                </div>
+                <div class="input_container">
+                    <input type="email" id="email" name="email" class="final_input_box" placeholder="Email Address">
+                    <input type="tel" id="phone" name="phone" class="final_input_box" placeholder="Phone Number">
+                </div>
+                <div class="input_container">
+                    <textarea id="additional_info" name="additional_info" class="final_input_box_tall" placeholder="Additional Information"></textarea>
+                </div>
+                <button type="submit" id="submit_button" class="submit_button" onsubmit="sendRequest()">Get Quote</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer_container">
+        <div class="footer">
+            <button class="footer_button hidden" id="backbutton" onclick="backState()">Back</button>
+            <div class="footer_info">
+                <h4>Absolute Apparel &copy; 2024</h4>
+            </div>
+            <button class="footer_button" id="nextbutton" onclick="nextState()">Next</button>
+        </div>
+    </div>
+
+    
+	<script src="js/quote.js"></script>
+  </body>
+</html>

@@ -1,5 +1,150 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<p> Hello World </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description">
+    <title>Absolute Apparel</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar_container">
+            <img class="navbar_icon" src="images/icons/logo.png" alt="logo">
+            <h2 class="hidesmol">Absolute Apparel</h2>
+        </div>
+
+        <div class="navbar_container navbar_links">
+            <a href="index.html">Home</a>
+            <a href="quote.html">Quote</a>
+        </div>
+    </div>
+
+    <div class="heroarea">
+        <div class="twocolumns">
+            <h1 class="bigtext roboto">WHERE YOUR DESIGN <span class="glimmer">SHINES</span></h1>
+            <h3 class="medtext" style="margin-top: -19px">You can trust in us for...</h3>
+            <button class="fake_button" id="hero_cycle_title">T-Shirts & Apparel</button>
+            <div class="hero_ctu">
+                <p id="hero_cycle_text">From custom t-shirts and hoodies to sweatpants and jeans, we ensure every print pops with vibrant colors and crisp details.</p>
+            </div>
+            <a href="quote.html">
+                <button class="quote_btn">Get a Quote</button>
+            </a>
+        </div>
+        <div class="twocolumns hidesmol">
+            <img src="images/placeholder/placeholder_screenprint.png" alt="screenprint" class="responsive-image">
+        </div>
+    </div>
+
+    <div class="quip">
+        <h1>Fast, Affordable, and Reliable - We're here to make your vision a reality.</h1>
+    </div>
+
+    <div class="experience_cards">
+        <h1><u>Why Choose Us?</u></h1>
+
+        <div class="card_container">
+            <div class="card">
+                <img src="images/icons/pencil.png" alt="pencil">
+                <h2>Attention to Detail</h2>
+                <p>Our team has years of hands-on experience in screen printing, so you can be sure your order will be vivid, crisp, and exactly as specified.</p>
+            </div>
+            <div class="card">
+                <img src="images/icons/cloth.png" alt="cloth">
+                <h2>Quality Materials</h2>
+                <p>We only use the best materials for our apparel, ensuring that your design will look great and last for years to come.</p>
+            </div>
+            <div class="card">
+                <img src="images/icons/stopwatch.png" alt="stopwatch">
+                <h2>Fast Turnaround</h2>
+                <p>We know timing is everything. Our streamlined process allows us to deliver your order quickly without sacrificing quality.</p>
+            </div>
+            <div class="card">
+                <img src="images/icons/dollar.png" alt="price">
+                <h2>Competitive Pricing</h2>
+                <p>We believe great prints shouldn't break the bank. Our prices are always fair and transparent, so you can trust that you're getting the best deal possible.</p>
+            </div>
+            <div class="card">
+                <img src="images/icons/phone.png" alt="phone">
+                <h2>Personalized Service</h2>
+                <p>From your first contact to the final delivery, you'll work directly with our friendly team every step of the way.</p>
+            </div>
+            <div class="card">
+                <img src="images/icons/rocket.png" alt="rocket">
+                <h2>Custom Solutions</h2>
+                <p>Have a unique request? We love a challenge! Let us know what you're looking for, and we'll work with you to make it happen.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="examples_slides">
+        <h1>Check out our work!</h1>
+        <div class="slideshow_container">
+            <div class="slide_wrapper">
+                <div class="slideshow_slide hidden">
+                    <div class="slide_textinfo">0 / 0</div>
+                    <img src="images/placeholder/grayshirtfront-ORANGE.png" alt="Placeholder image - bridge.resolveLA" class="hidden">
+                    <div class="slide_caption">Slideshow Image 1</div>
+                </div>
+                <div class="slideshow_slide hidden">
+                    <div class="slide_textinfo">0 / 0</div>
+                    <img src="images/placeholder/grayshirtfront-ORANGE.png" alt="Placeholder image - bridge.resolveLA">
+                    <div class="slide_caption">Slideshow Image 2</div>
+                </div>
+                <div class="slideshow_slide hidden">
+                    <div class="slide_textinfo">0 / 0</div>
+                    <img src="images/placeholder/grayshirtfront-ORANGE.png" alt="Placeholder image - bridge.resolveLA">
+                    <div class="slide_caption">Slideshow Image 3</div>
+                </div>
+                <div class="slideshow_slide hidden">
+                    <div class="slide_textinfo">0 / 0</div>
+                    <img src="images/placeholder/grayshirtfront-ORANGE.png" alt="Placeholder image - bridge.resolveLA">
+                    <div class="slide_caption">Slideshow Image 4</div>
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="howitworks">
+        <div class="howitworks_bg">
+            <h1>How It Works</h1>
+            <p>We make it easy to bring your designs to life!</p>
+            <ol class="howitworks_steps">
+                <li><b>Choose your Apparel</b> - Select from our wide range of high-quality apparel options.</li>
+                <li><b>Submit your Design</b> - Upload your design, or work with us to finalize it.</li>
+                <li><b>Get Your Quote</b> - We'll provide a detailed quote based on your design and order specifications.</li>
+                <li><b>Approve Your Proof</b> - Once you're happy with your design, we'll send you a proof for approval.</li>
+                <li><b>Sit back and Relax!</b> - We'll take care of the rest - handling the printing and shipping your order right on time.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="quotebox">
+        <div class="quote_inner">
+            <h1>Ready to get started?</h1>
+            <h3>Request a quote - it's free!</h3>
+            <a href="quote.html">
+                <button class="quote_btn">Get a Quote</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img class="footer_logo" src="images/icons/logo.png" alt="logo">
+        <h4 style="color: white;">Absolute Apparel &copy; 2024</h4>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
 
 </html>

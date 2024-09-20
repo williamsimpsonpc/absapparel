@@ -1,0 +1,378 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+div {
+    margin: 0;
+}
+
+.navbar {
+    background-color: #637081;
+    height: 75px;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar_links {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+}
+
+.navbar_link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.navbar_logo {
+    /* padding-left: 20px; */
+}
+
+.navbar_exit {
+    padding-right: 20px;
+}
+
+.navbar_icon {
+    /* padding: 30px; */
+    height: 80px;
+    margin-left: 20px;
+}
+
+.question_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.options_box {
+    width: 75%;
+}
+
+.options_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 130px;
+    height: 150px;
+    transition: all 0.3s ease;
+}
+
+.options_card:hover {
+    background-color: #f4f4f4;
+    border: 3px solid #333;
+}
+
+.options_options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wid75 {
+    width: 75%;
+}
+
+.wid85 {
+    width: 85%;
+}
+
+.dropdown_option {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.input_box {
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 3px solid #ccc;
+    width: 100%;
+    height: 30px;
+}
+
+.select_box {
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 3px solid #ccc;
+    width: 100%;
+    height: 55px;
+}
+
+.hidden, .hidden * {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden * {
+    display: none !important;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    transition: opacity 0.5s;
+}
+
+.dropdown_option > p {
+    margin-top: -20px;
+}
+
+#quotewindow {
+    margin-bottom: 100px;
+}
+
+.apparel-option {
+    border: 3px solid #ccc;
+}
+
+.apparel-option:hover {
+    border: 3px solid #888;
+}
+
+.selected-option {
+    border: 3px solid #000;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.footer_info {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.footer button {
+    height: 40px;
+    margin-top: -5px;
+    width: 100px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.footer button:hover {
+    background-color: #555;
+}
+
+.footer h4 {
+    margin-top: 5px;
+}
+
+.footer_container {
+    width: 100%;
+    height: 50px;
+    background-color: #DDD;
+    overflow-y: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.no_p_header {
+    margin-bottom: 38px;
+}
+
+.spacing_bottom {
+    margin-bottom: 30px;
+}
+
+.navbar_link h2 {
+    margin-right: 5px;
+}
+
+.options_icon {
+    height: 100px;
+    margin-top: 20px;
+}
+
+#quote_design > h4 {
+    margin-top: 1px;
+}
+
+#quote_design > h1 {
+    margin-top: -30px;
+}
+
+#quote_design {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.final_input_box {
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 3px solid #ccc;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.final_input_box_tall {
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 3px solid #ccc;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input_container {
+    margin-bottom: 20px;
+}
+
+#quote_getquote > h1 {
+    margin-top: -20px;
+}
+
+#quote_getquote > h4 {
+    margin-top: -10px;
+}
+
+#submit_button {
+    height: 40px;
+    margin-top: -5px;
+    width: 100px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+.file_select {
+    max-width: 450px; /* Maximum width */
+    max-height: 400px; /* Maximum height */
+    width: calc(50vw - 40px); /* Responsive width, 20px away from both sides */
+    height: auto; /* Height is auto, but we will constrain it */
+    min-height: 100px; /* Minimum height to prevent it from being too short */
+    max-height: calc(100vh - 40px); /* Maximum height based on viewport height, 20px away from top and bottom */
+    padding: 5rem;
+    background: #d7d7d7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    border: 2px dashed #555;
+    margin: 20px auto; /* Center horizontally and maintain 20px margin from the screen edges */
+}
+
+.file_select > p {
+    margin-bottom: 20px;
+}
+
+#submit {
+    z-index: 10;
+    position: relative;
+}
+
+.file_select.highlight:before {
+    border: 2px dashed #e1e1e1;
+}
+
+.file_select.highlight {
+    background: #d1d1d1;
+}
+
+#file-preview img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+}
+
+#file-preview img:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+#file-preview img:after {
+    content: 'asfa';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: rgba(0,0,0,.6);
+    z-index: 2;
+}
+
+input[type="file"] { display: none;}
+label[for="file-upload"] {
+    padding: 10px 25px; 
+    border: 1px solid #a1a1a1;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+label[for="file-upload"]:hover {
+    cursor: pointer;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
